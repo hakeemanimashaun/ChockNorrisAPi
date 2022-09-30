@@ -1,5 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import renderer, { act } from "react-test-renderer";
 
 import Home from "../../../src/screens/home/Home";
 
@@ -21,5 +21,12 @@ describe("<Home />", () => {
   it("renders correctly", () => {
     const tree = renderer.create(<Home />).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("button press navigates", () => {
+    const tree = renderer.create(<Home />);
+    const button = tree.root.findByProps({ testID: "cartegory" });
+    act(() => button.props.onPress());
+    expect(mockedNavigation).toHaveBeenCalledWith("Details");
   });
 });

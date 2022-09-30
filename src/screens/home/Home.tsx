@@ -20,7 +20,7 @@ import Search from "./components/SearchComponent";
 
 export type data = [string];
 
-const Home = () => {
+const Home: () => JSX.Element = () => {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
   const [data, setData] = useState<data>();
@@ -36,10 +36,7 @@ const Home = () => {
       url: `${baseUrl}jokes/search?query=${searchText}`,
     })
       .then((response) => {
-        console.log(searchText);
         setSearchData(response.data.result);
-        console.log(response, "response");
-        console.log(response.data, "data");
         setIsError(false);
         setIsSuccess(true);
       })
@@ -62,7 +59,14 @@ const Home = () => {
         console.log(error);
       });
   }, []);
-
+  const clearSearch = () => {
+    setShowCartegories(!showCartegories);
+    setSearchText("");
+  };
+  const searchJokes = () => {
+    setShowCartegories(!showCartegories);
+    Keyboard.dismiss();
+  };
   return (
     <BaseView>
       <Search
@@ -77,11 +81,11 @@ const Home = () => {
       <Spacer height={25} />
       <Button
         onPress={() => {
-          setShowCartegories(!showCartegories);
-          Keyboard.dismiss();
+          !showCartegories ? clearSearch() : searchJokes();
         }}
+        testID="button"
       >
-        <MediumText>
+        <MediumText testID="button-text">
           {!showCartegories ? "Clear Search" : "Search Jokes"}
         </MediumText>
       </Button>
@@ -92,6 +96,7 @@ const Home = () => {
             {data?.map((item, index) => {
               return (
                 <ViewButton
+                  testID="cartegory"
                   onPress={() => {
                     navigation.navigate("Details", { item: item });
                     Keyboard.dismiss();

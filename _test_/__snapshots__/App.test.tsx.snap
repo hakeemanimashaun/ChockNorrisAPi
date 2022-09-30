@@ -183,7 +183,7 @@ exports[`App renders correctly 1`] = `
                       <TextInput
                         onChangeText={[Function]}
                         onEndEditing={[Function]}
-                        placeholder="What's on your mind?"
+                        placeholder="search keywords?"
                         style={
                           Array [
                             Object {
@@ -234,6 +234,7 @@ exports[`App renders correctly 1`] = `
                           "width": 150,
                         }
                       }
+                      testID="button"
                     >
                       <Text
                         style={
@@ -246,6 +247,7 @@ exports[`App renders correctly 1`] = `
                             },
                           ]
                         }
+                        testID="button-text"
                       >
                         Search Jokes
                       </Text>

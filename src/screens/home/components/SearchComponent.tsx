@@ -25,7 +25,7 @@ const Search = (props: Props) => {
   return (
     <Container>
       <TextInput
-        placeholder="What's on your mind?"
+        placeholder="search keywords?"
         value={props.value}
         onChangeText={props.onChangeText}
         onEndEditing={props.onEndEditing}
