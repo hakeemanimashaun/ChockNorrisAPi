@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "\\"center\\"",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "boderRadius": 10,
+          "borderColor": "black",
+          "borderStyle": "solid",
+          "borderWidth": 0.3,
+          "flexDirection": "\\"row\\"",
+          "height": 60,
+          "justifyContent": "\\"spacebetween\\"",
+          "paddingBottom": 10,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TextInput
+      onChangeText={[Function]}
+      onEndEditing={[Function]}
+      placeholder="What's on your mind?"
+      style={
+        Array [
+          Object {
+            "color": "#010101",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "fontSize": 18,
+            "height": 60,
+            "marginRight": 10,
+            "width": "100%",
+          },
+        ]
+      }
+    />
+    <Text />
+  </View>
+  <View
+    height={25}
+    style={
+      Array [
+        Object {
+          "height": 25,
+        },
+      ]
+    }
+  />
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0066FF",
+        "borderRadius": 20,
+        "height": 45,
+        "justifyContent": "center",
+        "marginLeft": 12,
+        "opacity": 1,
+        "width": 150,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 18,
+            "fontWeight": "500",
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Search Jokes
+    </Text>
+  </View>
+  <View
+    height={15}
+    style={
+      Array [
+        Object {
+          "height": 15,
+        },
+      ]
+    }
+  />
+  <RCTScrollView
+    showsVerticalScrollIndicator={false}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "justifyContent": "\\"center\\"",
+              "paddingBottom": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 10,
+            },
+          ]
+        }
+      />
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;
