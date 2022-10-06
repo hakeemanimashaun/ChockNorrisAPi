@@ -7,21 +7,19 @@ import { HomeStackNavigatorParamList } from "./Types";
 
 const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
-const HomeStackNavigator = () => {
-  return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerTitle: "Cartegories" }}
-      />
-      <HomeStack.Screen
-        name="Details"
-        component={Details}
-        options={{ headerTitle: "Jokes" }}
-      />
-    </HomeStack.Navigator>
-  );
-};
+const HomeStackNavigator = () => (
+  <HomeStack.Navigator>
+    <HomeStack.Screen
+      name="Home"
+      component={Home}
+      options={{ headerTitle: "Cartegories" }}
+    />
+    <HomeStack.Screen
+      name="Details"
+      component={Details}
+      options={{ headerTitle: "Jokes" }}
+    />
+  </HomeStack.Navigator>
+);
 
 export default HomeStackNavigator;

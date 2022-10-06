@@ -10,9 +10,8 @@ import {
   ViewContainer,
 } from "../../components/generalStyled";
 import { HomeScreenNavigationProp } from "../../navigation/Types";
-import Carousel from "react-native-snap-carousel";
 import axios from "axios";
-import { FlatList, View, Text, Keyboard } from "react-native";
+import { FlatList, Keyboard } from "react-native";
 import { baseUrl } from "../../utils/BaseUrl";
 import { RegularText } from "../../components/generalStyled";
 import { ClickableWrapper, ViewButton } from "./components/styled";
@@ -28,8 +27,8 @@ const Home: () => JSX.Element = () => {
     useState<{ value: string; id: string }[]>();
   const [searchText, setSearchText] = useState<string>();
   const [showCartegories, setShowCartegories] = useState<boolean>(true);
-  const [isError, setIsError] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const searchQuery = async () => {
     await axios({
       method: "get",

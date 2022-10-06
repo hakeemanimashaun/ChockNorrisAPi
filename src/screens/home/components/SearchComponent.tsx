@@ -20,7 +20,11 @@ const TextInput = styled.TextInput`
   margin-right: 10px;
 `;
 
-type Props = { value: any; onChangeText: any; onEndEditing: any };
+type Props = {
+  value: string | undefined;
+  onChangeText: (text: React.SetStateAction<string | undefined>) => void;
+  onEndEditing: () => void;
+};
 const Search = (props: Props) => {
   return (
     <Container>

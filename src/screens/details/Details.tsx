@@ -12,7 +12,7 @@ import {
   Spacer,
   ViewContainer,
 } from "../../components/generalStyled";
-import { Image, TopView } from "./components/styles";
+import { Image, TopView } from "./styles";
 import axios from "axios";
 import { baseUrl } from "../../utils/BaseUrl";
 
